@@ -29,10 +29,10 @@ class App extends Component {
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/></div>
                 </div>
                 <div className="row">
-                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <Filter setTextValue={() => this.props.setText('Deneme text')}/>
                     </div>
-                    <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                         <Main username={this.props.user}/>
                     </div>
                 </div>

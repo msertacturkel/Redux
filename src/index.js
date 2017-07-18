@@ -6,6 +6,7 @@ import App from './containers/App';
 
 import '@blueprintjs/core/dist/blueprint.css';
 import '@blueprintjs/table/dist/table.css';
+import 'chart.js/dist/Chart';
 
 import 'flexboxgrid/dist/flexboxgrid.css';
 import registerServiceWorker from './registerServiceWorker';
