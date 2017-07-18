@@ -3,9 +3,12 @@
  */
 import React from "react";
 
-export const Footer = (props) => {
+const footerStyle = {
+    color: 'blue',
+};
+export const Footer = () => {
     return (
-        <div className="pt-card pt-elevation-1 pt-interactive">
+        <div className="pt-card pt-elevation-1 pt-interactive" style={footerStyle}>
             <p>Footer</p>
         </div>
     );

@@ -5,8 +5,8 @@ import React from "react";
 
 export const Graph = (props) => {
     return (
-        <div class="row">
-            <div class="col-xs-12
+        <div className="row">
+            <div className="col-xs-12
                 col-sm-8
                 col-md-6
                 col-lg-4">

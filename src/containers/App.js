@@ -9,6 +9,13 @@ import {Footer} from '../components/Footer';
 import {connect} from 'react-redux';
 import {setText} from "../actions/sampleActions"
 
+
+const footerStyle = {
+    position: 'fixed',
+    bottom: 0,
+    width: '85%',
+};
+
 class App extends Component {
     render() {
         return (
@@ -32,10 +39,11 @@ class App extends Component {
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/></div>
                 </div>
-                <div className="row">
-                    <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"><Footer/></div>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12" style={footerStyle}><Footer/></div>
+                    </div>
                 </div>
-
             </div>
         );
     }
