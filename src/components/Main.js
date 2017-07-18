@@ -16,7 +16,6 @@ export const Main = (props) => {
                     <Tab2 id="grhp" title="Graph" panel={<Graph />} />
                     <Tab2 id="smple" title="Sample" panel={<SampleTab username={props.username} />} />
                     <Tabs2.Expander />
-                    <input className="pt-input" type="text" placeholder="Search..." />
                 </Tabs2>
             </div>
     );

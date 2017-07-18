@@ -9,7 +9,6 @@ const footerStyle = {
 export const Footer = () => {
     return (
         <div className="pt-card pt-elevation-1 pt-interactive" style={footerStyle}>
-            <p>Footer</p>
         </div>
     );
 };
