@@ -6,6 +6,7 @@ import React from "react";
 
 export const Filter = (props) => {
 
+
     return (
 
         <div className="pt-card">
@@ -14,6 +15,8 @@ export const Filter = (props) => {
                 Next step
                 <span className="pt-icon-standard pt-icon-arrow-right pt-align-right"></span>
             </button>
+            <hr/>
+            <p> Filters Event : {props.filtersClicked} </p>
         </div>
     );
 };

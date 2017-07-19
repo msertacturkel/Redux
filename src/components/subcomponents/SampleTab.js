@@ -11,6 +11,7 @@ export const SampleTab = (props) => {
                 col-md-6
                 col-lg-4">
                 <p> Changed Text : {props.username} </p>
+                <p> Filters Event : {props.filtersEvent} </p>
             </div>
         </div>
 

@@ -5,11 +5,13 @@ import {createStore, combineReducers, applyMiddleware} from "redux";
 import logger from "redux-logger";
 
 import sample from "./reducers/sampleReducer";
+import filters from "./reducers/filtersReducer";
 
 
 export default createStore(
     combineReducers({
-        sample
+        sample,
+        filters
     }),
     {},
     applyMiddleware(logger));

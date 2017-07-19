@@ -14,7 +14,7 @@ export const Main = (props) => {
                 <Tabs2 id="Tabs2Example" onChange={this.handleTabChange}>
                     <Tab2 id="tbl" title="Table" panel={<TableTab />} />
                     <Tab2 id="grhp" title="Graph" panel={<Graph />} />
-                    <Tab2 id="smple" title="Sample" panel={<SampleTab username={props.username} />} />
+                    <Tab2 id="smple" title="Sample" panel={<SampleTab username={props.username}/>} />
                     <Tabs2.Expander />
                 </Tabs2>
             </div>

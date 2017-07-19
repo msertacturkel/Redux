@@ -10,7 +10,10 @@ export const Header = (props) => {
             <nav className="pt-navbar .modifier pt-dark">
                 <div className="pt-navbar-group pt-align-left">
                     <div className="pt-navbar-heading">Report Application Template</div>
-                    <button className="pt-button pt-minimal pt-icon-vertical-bar-chart-desc">Select Report</button>
+                    <span className="pt-navbar-divider"></span>
+                    <button className="pt-button pt-minimal pt-icon-vertical-bar-chart-desc">Reports</button>
+                    <span className="pt-navbar-divider"></span>
+                    <button className="pt-button pt-minimal pt-icon-list" onClick={() => props.filtersClicked()}>Filters</button>
                 </div>
                 <div className="pt-navbar-group pt-align-right">
 
