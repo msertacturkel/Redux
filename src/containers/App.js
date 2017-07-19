@@ -16,7 +16,8 @@ class App extends Component {
             <div className="container">
                 <div className="row">
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <Header filtersClicked={() => this.props.catchClick("true")}/>
+                        <Header
+                            filtersClicked={() => this.props.filtersEvent ? this.props.catchClick(false) : this.props.catchClick(true)}/>
                     </div>
                 </div>
                 <div className="row">
@@ -24,7 +25,8 @@ class App extends Component {
                 </div>
                 <div className="row">
                     <div className="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                        <Filter setTextValue={() => this.props.setText('Text Changed via Redux !!! ') } filtersClicked={this.props.filtersEvent}/>
+                        <Filter setTextValue={() => this.props.setText('Text Changed via Redux !!! ') }
+                                filtersClicked={this.props.filtersEvent}/>
                     </div>
                     <div className="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                         <Main username={this.props.user}/>
@@ -40,7 +42,7 @@ class App extends Component {
 const mapStateToProps = (state) => {
     return {
         user: state.sample.x,
-        filtersEvent : state.filters.isClicked
+        filtersEvent: state.filters.isClicked
     };
 };
 const mapDispatchToProps = (dispatch) => {

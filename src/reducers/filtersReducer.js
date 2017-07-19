@@ -2,7 +2,7 @@
  * Created by sertac.turkel on 19/07/2017.
  */
 const filtersReducer = (state = {
-    isClicked: "false"
+    isClicked: true
 }, action) => {
     switch (action.type) {
         case "CATCH_CLICK":
