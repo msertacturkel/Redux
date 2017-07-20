@@ -6,14 +6,13 @@ import React, {Component} from 'react';
 import {Button, Dialog, Intent} from "@blueprintjs/core";
 
 import {connect} from 'react-redux';
-import {setText} from "../actions/sampleActions"
 import {catchClick} from "../actions/filtersActions"
 
 class Filter extends Component {
 
     render() {
         return (
-            <div className="pt-card" hidden={!this.props.filtersClicked}>
+            <div className="pt-card" hidden="true">
                 <p>Filter</p>
                 <button type="button" className="pt-button pt-intent-success" onClick={() => this.props.setTextValue()}>
                     Next step
@@ -33,10 +32,16 @@ class Filter extends Component {
                         </div>
                         <div className="pt-dialog-footer">
                             <div className="pt-dialog-footer-actions">
-                                <Button text="Secondary"/>
+                                <Button
+                                    intent={Intent.DANGER}
+                                    onClick={() => {
+                                        console.log(this.props);
+                                        this.props.catchClick(true);
+                                    }}
+                                > <span className="pt-icon-standard pt-icon-arrow-left"></span>Back</Button>
                                 <Button
                                     intent={Intent.PRIMARY}
-                                    text="Primary"
+                                    text="Get Report Data"
                                     onClick={() => {
                                         console.log(this.props);
                                         this.props.catchClick(true);
@@ -52,15 +57,11 @@ class Filter extends Component {
 };
 const mapStateToProps = (state) => {
     return {
-        user: state.sample.x,
         filtersEvent: state.filters.isClicked
     };
 };
 const mapDispatchToProps = (dispatch) => {
     return {
-        setText: (x) => {
-            dispatch(setText(x));
-        },
         catchClick: (isClicked) => {
             dispatch(catchClick(isClicked))
         }
