@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import '../App.css';
 import {Header} from '../components/Header';
-import {Filter} from '../components/Filter';
+import Filter from '../components/Filter';
 import {Main} from '../components/Main';
 
 

@@ -1,20 +1,70 @@
 /**
  * Created by sertac.turkel on 17/07/2017.
  */
-import React from "react";
+import React, {Component} from 'react';
 
+import {Button, Dialog, Intent} from "@blueprintjs/core";
 
-export const Filter = (props) => {
-    return (
+import {connect} from 'react-redux';
+import {setText} from "../actions/sampleActions"
+import {catchClick} from "../actions/filtersActions"
 
-        <div className="pt-card" hidden={!props.filtersClicked}>
-            <p>Filter</p>
-            <button type="button" className="pt-button pt-intent-success" onClick={() => props.setTextValue()}>
-                Next step
-                <span className="pt-icon-standard pt-icon-arrow-right pt-align-right"></span>
-            </button>
-            <hr/>
-            <p> Filters Event : {props.filtersClicked?"true":"false"} </p>
-        </div>
-    );
+class Filter extends Component {
+
+    render() {
+        return (
+            <div className="pt-card" hidden={!this.props.filtersClicked}>
+                <p>Filter</p>
+                <button type="button" className="pt-button pt-intent-success" onClick={() => this.props.setTextValue()}>
+                    Next step
+                    <span className="pt-icon-standard pt-icon-arrow-right pt-align-right"></span>
+                </button>
+                <hr/>
+                <p> Filters Event : {this.props.filtersClicked ? "true" : "false"} </p>
+                <div>
+                    <Dialog
+                        iconName="home"
+                        isOpen={!this.props.filtersClicked}
+                        onClose={this.props.filtersClicked}
+                        title="Select Filter"
+                    >
+                        <div className="pt-dialog-body">
+                            Some content
+                        </div>
+                        <div className="pt-dialog-footer">
+                            <div className="pt-dialog-footer-actions">
+                                <Button text="Secondary"/>
+                                <Button
+                                    intent={Intent.PRIMARY}
+                                    text="Primary"
+                                    onClick={() => {
+                                        console.log(this.props);
+                                        this.props.catchClick(true);
+                                    }}
+                                />
+                            </div>
+                        </div>
+                    </Dialog>
+                </div>
+            </div>
+        );
+    }
 };
+const mapStateToProps = (state) => {
+    return {
+        user: state.sample.x,
+        filtersEvent: state.filters.isClicked
+    };
+};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        setText: (x) => {
+            dispatch(setText(x));
+        },
+        catchClick: (isClicked) => {
+            dispatch(catchClick(isClicked))
+        }
+
+    };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Filter);
