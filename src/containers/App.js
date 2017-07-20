@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import '../App.css';
 import {Header} from '../components/Header';
-import {Main} from '../components/Main';
+import Main from '../components/Main';
 import Filter from '../components/Filter';
 import Report from '../components/Report';
 
@@ -36,7 +36,7 @@ class App extends Component {
                          filtersClicked={this.props.filtersEvent}/>
                     </div>*/}
                     <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                        <Main username={this.props.user}/>
+                        <Main username={this.props.user} reportsClicked={this.props.reportsEvent}/>
                     </div>
                 </div>
                 <div className="row">

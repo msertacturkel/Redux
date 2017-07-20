@@ -56,8 +56,7 @@ class Report extends Component {
             </div>
         );
     }
-}
-;
+};
 const mapStateToProps = (state) => {
     return {
         filtersEvent: state.filters.isClicked,
