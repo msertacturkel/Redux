@@ -27,8 +27,52 @@ class Filter extends Component {
                         onClose={this.props.filtersClicked}
                         title="Select Filter"
                     >
+
                         <div className="pt-dialog-body">
-                            Some content
+                            <div className="row">
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter1</option>
+                                        <option defaultValue="1">One</option>
+                                    </select>
+                                </div>
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter2</option>
+                                        <option defaultValue="2">Two</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/></div>
+                            <div className="row">
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter3</option>
+                                        <option defaultValue="3">Three</option>
+                                    </select>
+                                </div>
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter4</option>
+                                        <option defaultValue="4">Four</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12"><br/></div>
+                            <div className="row">
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter5</option>
+                                        <option defaultValue="5">Five</option>
+                                    </select>
+                                </div>
+                                <div className="pt-select col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                    <select>
+                                        <option>Filter6</option>
+                                        <option defaultValue="6">Six</option>
+                                    </select>
+                                </div>
+                            </div>
                         </div>
                         <div className="pt-dialog-footer">
                             <div className="pt-dialog-footer-actions">
@@ -54,7 +98,8 @@ class Filter extends Component {
             </div>
         );
     }
-};
+}
+;
 const mapStateToProps = (state) => {
     return {
         filtersEvent: state.filters.isClicked
