@@ -7,4 +7,10 @@ export function catchClick(isClicked){
         payload: isClicked
     };
 }
+export function catchReportsClick(isClicked){
+    return {
+        type:"CATCH_REPORTS_CLICK",
+        payload: isClicked
+    };
+}
 

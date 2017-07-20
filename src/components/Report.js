@@ -1,9 +1,6 @@
 /**
  * Created by sertac.turkel on 20/07/2017.
  */
-/**
- * Created by sertac.turkel on 17/07/2017.
- */
 import React, {Component} from 'react';
 
 import {Button, Dialog, Intent} from "@blueprintjs/core";
@@ -20,8 +17,8 @@ class Report extends Component {
                 <div>
                     <Dialog
                         iconName="home"
-                        isOpen={!this.props.filtersClicked}
-                        onClose={this.props.filtersClicked}
+                        isOpen={!this.props.reportsClicked}
+                        onClose={this.props.reportsClicked}
                         title="Select Report"
                     >
 
@@ -41,7 +38,7 @@ class Report extends Component {
                                     intent={Intent.DANGER}
                                     onClick={() => {
                                         console.log(this.props);
-                                        this.props.catchClick(true);
+                                        this.props.catchReportsClick(true);
                                     }}
                                 > <span className="pt-icon-standard pt-icon-arrow-left"></span>Back</Button>
                                 <Button
@@ -49,7 +46,7 @@ class Report extends Component {
                                     text="Go to Report"
                                     onClick={() => {
                                         console.log(this.props);
-                                        this.props.catchClick(true);
+                                        this.props.catchReportsClick(true);
                                     }}
                                 />
                             </div>
@@ -79,4 +76,4 @@ const mapDispatchToProps = (dispatch) => {
 
     };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Filter);
+export default connect(mapStateToProps, mapDispatchToProps)(Report);

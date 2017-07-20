@@ -11,7 +11,7 @@ export const Header = (props) => {
                 <div className="pt-navbar-group pt-align-left">
                     <div className="pt-navbar-heading">Report Application Template</div>
                     <span className="pt-navbar-divider"></span>
-                    <button className="pt-button pt-minimal pt-icon-vertical-bar-chart-desc">Reports</button>
+                    <button className="pt-button pt-minimal pt-icon-vertical-bar-chart-desc" onClick={() => props.reportsClicked()}>Reports</button>
                     <span className="pt-navbar-divider"></span>
                     <button className="pt-button pt-minimal pt-icon-list" onClick={() => props.filtersClicked()}>Filters</button>
                 </div>

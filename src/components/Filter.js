@@ -6,7 +6,8 @@ import React, {Component} from 'react';
 import {Button, Dialog, Intent} from "@blueprintjs/core";
 
 import {connect} from 'react-redux';
-import {catchClick} from "../actions/filtersActions"
+import {catchClick} from "../actions/filtersActions";
+import {catchReportsClick} from "../actions/filtersActions";
 
 class Filter extends Component {
 
@@ -102,13 +103,18 @@ class Filter extends Component {
 ;
 const mapStateToProps = (state) => {
     return {
-        filtersEvent: state.filters.isClicked
+        filtersEvent: state.filters.isClicked,
+        reportsEvent: state.filters.isReportsClicked
+
     };
 };
 const mapDispatchToProps = (dispatch) => {
     return {
         catchClick: (isClicked) => {
             dispatch(catchClick(isClicked))
+        },
+        catchReportsClick: (isClicked) => {
+            dispatch(catchReportsClick(isClicked))
         }
 
     };

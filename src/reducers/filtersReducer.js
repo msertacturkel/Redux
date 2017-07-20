@@ -2,7 +2,8 @@
  * Created by sertac.turkel on 19/07/2017.
  */
 const filtersReducer = (state = {
-    isClicked: true
+    isClicked: true,
+    isReportsClicked: true
 }, action) => {
     switch (action.type) {
         case "CATCH_CLICK":
@@ -11,6 +12,12 @@ const filtersReducer = (state = {
                 isClicked: action.payload
             };
 
+            break;
+        case "CATCH_REPORTS_CLICK":
+            state = {
+                ...state,
+                isReportsClicked: action.payload
+            };
             break;
         default:
             break;
